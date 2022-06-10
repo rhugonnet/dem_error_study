@@ -1,2 +1,5 @@
 # dem_error_study
-Process case studies on DEM uncertainty analysis at the Mont-Blanc massif and Northern Patagonian Icefield: Hugonnet et al. (2022).
+
+Code and results of **Hugonnet et al. (2022), *Uncertainty analysis of digital elevation models by spatial inference from stable terrain***. :globe_with_meridians: :mount_fuji: 
+
+In construction
