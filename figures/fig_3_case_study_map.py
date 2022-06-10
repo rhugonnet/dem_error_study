@@ -8,6 +8,7 @@ import geoutils as gu
 import pyproj
 from cartopy.io.shapereader import Reader
 from cartopy.feature import ShapelyFeature
+import cartopy.feature as cfeature
 
 fn_lc = '/home/atom/data/inventory_products/Land_cover/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2015-v2.0.7_robinson.tif'
 fn_hs = '/home/atom/documents/paper/Hugonnet_2020/figures/world_robin_rs.tif'
@@ -16,7 +17,7 @@ fn_shp = '/home/atom/data/inventory_products/RGI/00_rgi60_neighb_merged/11_rgi60
 fn_shp_buff = '/home/atom/data/inventory_products/RGI/buffered/rgi60_buff_diss.shp'
 fn_ais = '/home/atom/data/inventory_products/RGI/AIS_mask/ais_glacier_ice_mask_wgs84.shp'
 fn_gis = '/home/atom/data/inventory_products/RGI/GIS_mask/GreenlandMasks/Greenland_IceMask_wgs84.shp'
-fn_forest_shp_simplified='/home/atom/ongoing/work_stderr_dem/case_study_montblanc/ESA_CCI_forest_simplified_delainey.shp'
+fn_forest_shp_simplified='/home/atom/ongoing/work_stderr_dem/case_study_montblanc/outlines/ESA_CCI_forest_simplified_delainey.shp'
 
 fn_hs_montblanc = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Mont-Blanc_2017-10-25_DEM_5m_hillshade.tif'
 
@@ -329,6 +330,28 @@ ax.scatter(x_mb, y_mb, s=100, marker='x', color='white', linewidths=3, zorder=30
 ax.text(x_mb - 800 , y_mb, 'Mont\nBlanc', color='white', va='center', ha='right', zorder=30, fontweight='bold')
 
 # ax.text(0.025, 0.975, 'b', transform=ax.transAxes, ha='left', va='top', fontweight='bold', fontsize=14, zorder=30)
+
+sub_ax = fig.add_axes([0.05,0.775,0.25,0.25],
+                      projection=ccrs.Robinson(), label='world')
+
+sub_ax.add_feature(cfeature.NaturalEarthFeature('physical', 'ocean', '50m', facecolor='lightgrey'), alpha=0.3)
+sub_ax.add_feature(cfeature.NaturalEarthFeature('physical', 'land', '50m', facecolor=plt.cm.Greys(0.95)), alpha=0.8)
+plt_extent=[hs_r.bounds.left, hs_r.bounds.right, hs_r.bounds.bottom, hs_r.bounds.top]
+
+hs_arr = gu.spatial_tools.get_array_and_mask(hs_r)[0]
+color1 = colors.to_rgba('black')
+color2 = colors.to_rgba('white')
+cmap2 = colors.LinearSegmentedColormap.from_list('my_cmap2', [color1, color2], 256)
+cmap2._init()
+cmap2._lut[0:1, -1] = 0.0  # We made transparent de 10 first levels of hillshade,
+cmap2._lut[1:, -1] = 0.60
+sub_ax.imshow(hs_arr[:, :], transform=ccrs.Robinson(), extent=plt_extent, cmap=cmap2, zorder=2, interpolation='nearest',rasterized=True)
+
+bounds = [-10, 20, 35, 55]
+sub_ax.set_extent(bounds, ccrs.Geodetic())
+
+sub_ax.plot(6.86, 45.83, marker='s', color='red', transform=ccrs.Geodetic())
+# sub_ax.text(10, 50, 'Europe', color=plt.cm.Greys(0.8), ha='center', va='center', transform=ccrs.Geodetic(), fontweight='bold', rotation=15)
 
 # Save to file
 plt.savefig('/home/atom/ongoing/work_stderr_dem/figures/final/Figure_3_final.png', dpi=400)
