@@ -1,0 +1,8 @@
+name: dem-error
+channels:
+  - conda-forge
+dependencies:
+  - xdem
+  - cartopy
+  - seaborn
+  - gstools
