@@ -17,6 +17,8 @@ fn_dh = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/dh_NK_Deramp_fi
 r = Raster(fn_dem)
 dh_r = Raster(fn_dh)
 dh = gu.spatial_tools.get_array_and_mask(dh_r)[0]
+nmad_dh = xdem.spatialstats.nmad(dh)
+dh[np.abs(dh) > 9 * nmad_dh] = np.nan
 fn_shp_glacier = '/home/atom/data/inventory_products/RGI/00_rgi60_neighb_merged/11_rgi60_CentralEurope/11_rgi60_CentralEurope.shp'
 glacier_inventory = Vector(fn_shp_glacier)
 glacier_inventory.crop2raster(r)
@@ -105,7 +107,7 @@ for rgiid in list_rgiids:
 
         neff_supralr = xdem.spatialstats.neff_circ(area=area, list_vgm=[(params_lr[0]/2, 'Gau', params_lr[1]),
                                                                    (params_lr[2], 'Sph', params_lr[3]),
-                                                                   (20000, 'Sph', 1.5*params_lr[5])])
+                                                                   (20000, 'Sph', 2*(params_lr[5]))])
 
         neff_lr_only = xdem.spatialstats.neff_circ(area=area, list_vgm=[(params_lr[2], 'Sph', params_lr[3])])
         neff_lr2_only = xdem.spatialstats.neff_circ(area=area, list_vgm=[(params_lr[4], 'Sph', params_lr[5])])
