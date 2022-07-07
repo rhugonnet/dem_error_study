@@ -2,7 +2,7 @@ name: dem-error
 channels:
   - conda-forge
 dependencies:
-  - xdem
+  - xdem=0.0.6
   - cartopy
   - seaborn
   - gstools
