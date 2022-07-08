@@ -27,11 +27,9 @@ In particular, xDEM includes tutorials on DEM uncertainty analysis to:
 
 The dataset consists of:
 1. **Nearly-simultaneous Pléiades–SPOT-6 elevation differences at the Mont-Blanc massif and the Pléiades DEM used as a reference for
-alignment and deriving terrain attributes** (.tif, *~200 MB*) at 5 m posting available at [https://doi.org/10.6096/13](https://doi.org/10.6096/13).
+alignment and deriving terrain attributes** (.tif, *~200 MB*) at 5 m posting available at [TBC](TBC).
 2. **Nearly-simultaneous ASTER–SPOT-5 elevation differences at the Northern Patagonian Icefield** at 30 m posting (.tif, *~50 MB*)
- available at [https://doi.org/10.6096/13](https://doi.org/10.6096/13).
-3. **Elevation time series** (.nc, *~3TB*) at 100 m posting and monthly time step (in time, might be available through NSIDC): [TBC]().
-4. **Bias-corrected ASTER DEMs** (.tif, ~*10TB*) at 30 m posting, available at [TBC]().
+ available at [TBC](TBC).
 
 
 ## Reproduce the processing steps with the case studies
