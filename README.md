@@ -45,15 +45,16 @@ install a working environment containing those packages and their dependencies w
 conda env create -f environment.yml
 ```
 
-Further details on setup and functions present in these packages are available through **[xDEM's documentation](https://xdem.readthedocs.io/)**,
- **[SciKit-GStat's documentation](https://mmaelicke.github.io/scikit-gstat/)** and **[GSTools's documentation](https://geostat-framework.readthedocs.io/projects/gstools/en/stable/)**.
-
 *Note: Due to continuous development changes, xDEM is here set to v0.0.6 to exactly reproduce the processing steps as in the paper.* 
 
 ### How to use
 
 Scripts for reproducing the processing steps are located in *case_study_montblanc/* or *case_study_npi/*. Those are generally quite short as they use one-liner routines of xDEM.
 Some computations (e.g., simulation of correlated field) are performed only in the *figures/* scripts. In the future, those might be integrated in xDEM.
+
+While all scripts are commented, the details on the functions used are available through **[xDEM's documentation](https://xdem.readthedocs.io/)**,
+ **[SciKit-GStat's documentation](https://mmaelicke.github.io/scikit-gstat/)** and **[GSTools's documentation](https://geostat-framework.readthedocs.io/projects/gstools/en/stable/)**.
+
 
 ## Reproduce the figures and tables of the paper
 
