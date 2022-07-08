@@ -2,7 +2,7 @@
 
 Code and results of [**Hugonnet et al. (2022), *Uncertainty analysis of digital elevation models by spatial inference from stable terrain***](https://doi.org/10.1109/jstars.2022.3188922). :globe_with_meridians: :mount_fuji: 
 
-Below a short guide to: perform the uncertainty analysis of your own data, retrieve the case study datasets, reproduce the processing steps with the case studies, reproduce the figures and tables of the paper.
+Below a short guide to: perform the uncertainty analysis of your own DEMs, retrieve the case study datasets, reproduce the processing steps with the case studies, reproduce the figures and tables of the paper.
 
 ![alt text](https://github.com/rhugonnet/dem_error_study/blob/main/figures/fig_2.png?raw=true)
 
@@ -36,26 +36,35 @@ alignment and deriving terrain attributes** (.tif, *~200 MB*) at 5 m posting ava
 
 ### Setup environment
 
-Most scripts rely on the code assembled in the packages [xDEM](https://github.com/GlacioHack/xdem) which in turns relies on [SciKit-GStat](https://github.com/mmaelicke/scikit-gstat).
-
-You can rapidly install a working environment containing those packages and their dependencies with the 
+Most scripts rely on the code assembled in the package [xDEM](https://github.com/GlacioHack/xdem) which in turns relies on [SciKit-GStat](https://github.com/mmaelicke/scikit-gstat).
+Some routines also rely on [GSTools](https://github.com/GeoStat-Framework/GSTools). You can rapidly 
+install a working environment containing those packages and their dependencies with the 
 *environment.yml* file, located at the root of the repository, using [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html):
 
 ```sh
 conda env create -f environment.yml
 ```
 
-Further details on setup and functions present in these packages are available through **[xDEM's documentation](https://xdem.readthedocs.io/)** and
- **[SciKit-GStat's documentation](https://mmaelicke.github.io/scikit-gstat/)**.
+Further details on setup and functions present in these packages are available through **[xDEM's documentation](https://xdem.readthedocs.io/)**,
+ **[SciKit-GStat's documentation](https://mmaelicke.github.io/scikit-gstat/)** and **[GSTools's documentation](https://geostat-framework.readthedocs.io/projects/gstools/en/stable/)**.
 
-*Note: Due to continuous development changes, xDEM is set to v0.0.6 to exactly reproduce the processing steps of the paper.* 
+*Note: Due to continuous development changes, xDEM is here set to v0.0.6 to exactly reproduce the processing steps as in the paper.* 
 
 ### How to use
 
 Scripts for reproducing the processing steps are located in *case_study_montblanc/* or *case_study_npi/*. Those are generally quite short as they use one-liner routines of xDEM.
-
 Some computations (e.g., simulation of correlated field) are performed only in the *figures/* scripts. In the future, those might be integrated in xDEM.
 
-## Reproduce the figures and tables
+## Reproduce the figures and tables of the paper
 
-Scripts for reproducing the figures and tables are located in *figures/*. In some occasions, those duplicate the processing steps done in *case_study_montblanc/* or *case_study_npi/* for plotting purposes (e.g., violin plots require the full distribution of samples, not only the binned estimates of dispersion).
+Scripts for reproducing the figures and tables are located in *figures/*. These scripts also depend on the environment 
+file `environment.yml` as they rely on [Cartopy](https://scitools.org.uk/cartopy/docs/latest/) and 
+[Seaborn](https://seaborn.pydata.org/) in addition to Matplotlib.  In some occasions, the figure scripts duplicate the 
+processing steps done in *case_study_montblanc/* or *case_study_npi/* for plotting purposes (e.g., violin plots require 
+the full distribution of samples, not only the binned estimates of dispersion).
+
+For plotting figures of your own data, xDEM provides simpler plotting tools of binned data and variograms 
+(see [example gallery](https://xdem.readthedocs.io/en/latest/auto_examples/index.html)).
+
+
+Enjoy! :volcano: 
