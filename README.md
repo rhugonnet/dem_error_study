@@ -4,7 +4,7 @@ Code and results of [**Hugonnet et al. (2022), *Uncertainty analysis of digital 
 
 Below a short guide to: perform the uncertainty analysis of your own DEMs, retrieve the case study datasets, reproduce the processing steps with the case studies, reproduce the figures and tables of the paper.
 
-<img src="https://github.com/rhugonnet/dem_error_study/blob/main/figures/fig_2.png?raw=true" width="600">
+<img src="https://github.com/rhugonnet/dem_error_study/blob/main/figures/fig_2.png?raw=true" width="800">
 
 ## Uncertainty analysis of your own data with xDEM
 
