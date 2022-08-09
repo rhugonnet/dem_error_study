@@ -266,6 +266,7 @@ for k in [1,0,2,3]:
 
     ax1.set_xlim((xmin[k], xmax[k]))
     ax1.set_ylim((0, 1))
+    ax1.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, p: format(int(x), ',')))
 
     for i in range(len(df0)):
         width = interval_var[i + 1] - interval_var[i]
@@ -340,7 +341,7 @@ for k in [1,0,2,3]:
                              shrinkA=0, shrinkB=0,
                              patchA=None, patchB=None, linewidth=1, facecolor='black'), zorder=30)
 
-        ax.text(3900, 0.65, '2\% of variance\ndecorrelates\nafter 3 900 m', ha='right', va='center',
+        ax.text(3900, 0.65, '2\% of variance\ndecorrelates\nafter 3.9 km', ha='right', va='center',
                 bbox=dict(facecolor='white', boxstyle='round', alpha=0.8, linewidth=0.5), zorder=31)
 
         ax.annotate(text='', xy=(11200, 0.95), xytext=(11200, 1), arrowprops=dict(
@@ -355,7 +356,7 @@ for k in [1,0,2,3]:
                                     shrinkA=0, shrinkB=0,
                                     patchA=None, patchB=None, linewidth=1, facecolor='black'), zorder=30)
 
-        ax.text(10500, 0.675, '5\% of variance\nis correlated\nuntil 11 200 m', ha='center', va='center',
+        ax.text(10500, 0.675, '5\% of variance\nis correlated\nuntil 11.2 km', ha='center', va='center',
                 bbox=dict(facecolor='white', boxstyle='round', alpha=0.8, linewidth=0.5), zorder=31)
 
     ax.set_xticks([])
@@ -463,7 +464,7 @@ r = round(y2/y1, 1) * 100
 ax.annotate(text='', xy=(x, y2), xytext=(x, y1), arrowprops=dict(arrowstyle='-|>', connectionstyle=None,
                              shrinkA=0, shrinkB=0,
                              patchA=None, patchB=None, linewidth=1, facecolor='black'))
-ax.text(x/20, y1, '{:,.0f}\%\nlarger error\nfor {:.1f}'.format(r, x).replace(',',' ')+' km$^{2}$', ha='center', va='center',
+ax.text(x/20, y1, '{:,.0f}\%\nlarger error\nfor {:.1f}'.format(r, x)+' km$^{2}$', ha='center', va='center',
         bbox=dict(facecolor='white', boxstyle='round', alpha=0.8, linewidth=0.5))
 
 x = 10
@@ -475,7 +476,7 @@ r = round(y2/y1, 1) * 100
 ax.annotate(text='', xy=(x, y2), xytext=(x, y1), arrowprops=dict(arrowstyle='-|>', connectionstyle=None,
                              shrinkA=0, shrinkB=0,
                              patchA=None, patchB=None, linewidth=1, facecolor='black'))
-ax.text(x/20, y1, '{:,.0f}\%\nlarger error\nfor {:.0f}'.format(r, x).replace(',',' ')+' km$^{2}$', ha='center', va='center',
+ax.text(x/20, y1, '{:,.0f}\%\nlarger error\nfor {:.0f}'.format(r, x)+' km$^{2}$', ha='center', va='center',
         bbox=dict(facecolor='white', boxstyle='round', alpha=0.8, linewidth=0.5))
 
 # ax.plot([], [], color='tab:brown', label='Stable terrain')
@@ -660,5 +661,5 @@ ax.add_patch(mpatches.ConnectionPatch(xyA=(inside_ext[2], inside_ext[1]), xyB=(0
                                       zorder=10, facecolor='black'))
 
 # Save to file
-plt.savefig('/home/atom/ongoing/work_stderr_dem/figures/final/Figure_5_final.pdf', dpi=400, transparent=True)
+plt.savefig('/home/atom/ongoing/work_stderr_dem/figures/final/Figure_5_final_corrected.pdf', dpi=400, transparent=True)
 
