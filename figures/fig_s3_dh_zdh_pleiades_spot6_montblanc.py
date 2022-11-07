@@ -12,9 +12,9 @@ import xdem
 
 fn_shp = '/home/atom/data/inventory_products/RGI/00_rgi60_neighb_merged/11_rgi60_CentralEurope/11_rgi60_CentralEurope.shp'
 fn_df_sub = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/df_heteroscedas_slope_curv.csv'
-fn_dh = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/dh_NK_Deramp_final.tif'
-fn_forest_shp_simplified='/home/atom/ongoing/work_stderr_dem/case_study_montblanc/outlines/ESA_CCI_forest_simplified_delainey.shp'
-fn_pleiades = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Mont-Blanc_2017-10-25_DEM_5m.tif'
+fn_dh = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/dh_Pleiades-SPOT6_Mont-Blanc_NK_Deramp.tif'
+fn_forest_shp_simplified='/home/atom/ongoing/work_stderr_dem/case_study_montblanc/outlines/forest_Mont-Blanc_ESACCI_delainey.shp'
+fn_pleiades = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Pleiades_Mont-Blanc_2017-10-25_DEM_5m.tif'
 
 crop_ext = [339180, 5086760, 340680, 5087460]
 

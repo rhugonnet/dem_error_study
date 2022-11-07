@@ -15,7 +15,7 @@ plt.rcParams["text.usetex"] = True
 # Showing dh before and after alignment with hillshade
 fn_hs = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Mont-Blanc_2017-10-25_DEM_5m_hillshade.tif'
 fn_dh_nk = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/dh_shift_nk_Pleiades.tif'
-fn_dh_final_dh = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/dh_NK_Deramp_final.tif'
+fn_dh_final_dh = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/dh_Pleiades-SPOT6_Mont-Blanc_NK_Deramp.tif'
 
 # Showing patterns of noise
 fn_dh_pleiades_noise = '/home/atom/ongoing/work_stderr_dem/noise_examples/artefact_dh/dh_Peru_2017-09-01_PHR_vs_2017-08-20_PHR.tif'

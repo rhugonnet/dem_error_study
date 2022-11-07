@@ -12,7 +12,7 @@ from cartopy.io.shapereader import Reader
 from cartopy.feature import ShapelyFeature
 
 # Open data
-fn_dem = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Mont-Blanc_2017-10-25_DEM_5m.tif'
+fn_dem = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Pleiades_Mont-Blanc_2017-10-25_DEM_5m.tif'
 r = Raster(fn_dem).reproject(dst_res=200)
 
 # Shapes with area equal to that of the Mer de Glace

@@ -5,19 +5,19 @@ import xdem
 import geoutils as gu
 
 # Open files
-fn_ddem = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/dh_NK_Deramp_final.tif'
-fn_pleiades = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Mont-Blanc_2017-10-25_DEM_5m.tif'
+fn_ddem = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/dh_Pleiades-SPOT6_Mont-Blanc_NK_Deramp.tif'
+fn_pleiades = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Pleiades_Mont-Blanc_2017-10-25_DEM_5m.tif'
 fn_shp = '/home/atom/data/inventory_products/RGI/00_rgi60_neighb_merged/11_rgi60_CentralEurope/11_rgi60_CentralEurope.shp'
-fn_forest = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/outlines/ESA_CCI_forest_simplified_delainey.shp'
+fn_forest = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/outlines/forest_Mont-Blanc_ESACCI_delainey.shp'
 
 # Custom mask to see more terrain on Fig. 5 panel b
 # fn_forest = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/outlines/forest_Mt-Blanc.shp'
 
 # Files on server
-# fn_ddem = '/data/icesat/travail_en_cours/romain/dem_error_study/final_run/dh_NK_Deramp_final.tif'
-# fn_pleiades = '/data/icesat/travail_en_cours/romain/dem_error_study/final_run/Mont-Blanc_2017-10-25_DEM_5m.tif'
+# fn_ddem = '/data/icesat/travail_en_cours/romain/dem_error_study/final_run/dh_Pleiades-SPOT6_Mont-Blanc_NK_Deramp.tif'
+# fn_pleiades = '/data/icesat/travail_en_cours/romain/dem_error_study/final_run/Pleiades_Mont-Blanc_2017-10-25_DEM_5m.tif'
 # fn_shp = '/data/icesat/travail_en_cours/romain/data/outlines/rgi60/00_rgi60_neighb_merged/11_rgi60_CentralEurope/11_rgi60_CentralEurope.shp'
-# fn_forest = '/data/icesat/travail_en_cours/romain/dem_error_study/final_run/outlines/ESA_CCI_forest_simplified_delainey.shp'
+# fn_forest = '/data/icesat/travail_en_cours/romain/dem_error_study/final_run/outlines/forest_Mont-Blanc_ESACCI_delainey.shp'
 
 
 pleia_ddem = gu.Raster(fn_ddem)

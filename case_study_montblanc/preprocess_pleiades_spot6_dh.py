@@ -9,9 +9,9 @@ import numpy as np
 
 # Open DEMs and outlines
 fn_glacier_outlines = '/home/atom/data/inventory_products/RGI/00_rgi60_neighb_renamed/11_rgi60_CentralEurope/region_11_rgi60_CentralEurope.shp'
-fn_dem_spot = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Mont-Blanc_2017-10-24_DEM_5m.tif'
-fn_dem_pleiades = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Mont-Blanc_2017-10-25_DEM_5m.tif'
-fn_forest_shp_simplified='/home/atom/ongoing/work_stderr_dem/case_study_montblanc/outlines/ESA_CCI_forest_simplified_delainey.shp'
+fn_dem_spot = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/SPOT6_Mont-Blanc_2017-10-24_DEM_5m.tif'
+fn_dem_pleiades = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Pleiades_Mont-Blanc_2017-10-25_DEM_5m.tif'
+fn_forest_shp_simplified='/home/atom/ongoing/work_stderr_dem/case_study_montblanc/outlines/forest_Mont-Blanc_ESACCI_delainey.shp'
 
 dem_spot = xdem.DEM(fn_dem_spot)
 dem_pleiades = xdem.DEM(fn_dem_pleiades)
@@ -34,7 +34,7 @@ aligned_dem_spot = nk_deramp.apply(reproj_dem_spot)
 
 # Save co-registered elevation differences to file
 dh = dem_pleiades - aligned_dem_spot
-dh.save('/home/atom/ongoing/work_stderr_dem/case_study_montblanc/dh_NK_Deramp_final.tif')
+dh.save('/home/atom/ongoing/work_stderr_dem/case_study_montblanc/dh_Pleiades-SPOT6_Mont-Blanc_NK_Deramp.tif')
 
 # For Figure S2: saving independent steps of co-registration
 nk = xdem.coreg.NuthKaab()

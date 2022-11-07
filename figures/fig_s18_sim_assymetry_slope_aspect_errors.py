@@ -8,7 +8,7 @@ import time
 import pandas as pd
 
 # Open data
-fn_dem = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Mont-Blanc_2017-10-25_DEM_5m.tif'
+fn_dem = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Pleiades_Mont-Blanc_2017-10-25_DEM_5m.tif'
 n_sim = 200
 r = Raster(fn_dem)
 

@@ -8,10 +8,10 @@ from cartopy.io.shapereader import Reader
 from cartopy.feature import ShapelyFeature
 import xdem
 
-fn_ddem = '/home/atom/ongoing/work_stderr_dem/case_study_npi/dh_ASTER-SPOT_NK_Deramp.tif'
+fn_ddem = '/home/atom/ongoing/work_stderr_dem/case_study_npi/dh_ASTER-SPOT5_NPI_NK_Deramp.tif'
 fn_shp = '/home/atom/data/inventory_products/RGI/00_rgi60_neighb_merged/17_rgi60_SouthernAndes/17_rgi60_SouthernAndes.shp'
-fn_corr='/home/atom/ongoing/work_stderr_dem/case_study_npi/AST_L1A_00303182012144228/AST_L1A_00303182012144228_CORR.tif'
-fn_dem_aster = '/home/atom/ongoing/work_stderr_dem/case_study_npi/AST_L1A_00303182012144228/AST_L1A_00303182012144228_Z.tif'
+fn_corr='/home/atom/ongoing/work_stderr_dem/case_study_npi/AST_L1A_00303182012144228/ASTER_NPI_00303182012144228_CORR.tif'
+fn_dem_aster = '/home/atom/ongoing/work_stderr_dem/case_study_npi/AST_L1A_00303182012144228/ASTER_NPI_00303182012144228_Z.tif'
 
 # 1/ First, plot elevation differences
 fig = plt.figure(figsize=(6, 5.5))

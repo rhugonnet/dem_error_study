@@ -12,8 +12,8 @@ import seaborn as sns
 import skgstat
 import pyproj
 
-fn_dem = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Mont-Blanc_2017-10-25_DEM_5m.tif'
-fn_dh = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/dh_NK_Deramp_final.tif'
+fn_dem = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Pleiades_Mont-Blanc_2017-10-25_DEM_5m.tif'
+fn_dh = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/dh_Pleiades-SPOT6_Mont-Blanc_NK_Deramp.tif'
 r = Raster(fn_dem)
 dh_r = Raster(fn_dh)
 dh = gu.spatial_tools.get_array_and_mask(dh_r)[0]

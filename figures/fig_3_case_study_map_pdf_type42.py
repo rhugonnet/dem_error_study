@@ -22,7 +22,7 @@ fn_shp = '/home/atom/data/inventory_products/RGI/00_rgi60_neighb_merged/11_rgi60
 fn_shp_buff = '/home/atom/data/inventory_products/RGI/buffered/rgi60_buff_diss.shp'
 fn_ais = '/home/atom/data/inventory_products/RGI/AIS_mask/ais_glacier_ice_mask_wgs84.shp'
 fn_gis = '/home/atom/data/inventory_products/RGI/GIS_mask/GreenlandMasks/Greenland_IceMask_wgs84.shp'
-fn_forest_shp_simplified='/home/atom/ongoing/work_stderr_dem/case_study_montblanc/outlines/ESA_CCI_forest_simplified_delainey.shp'
+fn_forest_shp_simplified='/home/atom/ongoing/work_stderr_dem/case_study_montblanc/outlines/forest_Mont-Blanc_ESACCI_delainey.shp'
 
 fn_hs_montblanc = '/home/atom/ongoing/work_stderr_dem/case_study_montblanc/Mont-Blanc_2017-10-25_DEM_5m_hillshade.tif'
 

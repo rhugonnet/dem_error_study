@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 
 # Open DEMs and outlines
 fn_glacier_outlines = '/home/atom/data/inventory_products/RGI/00_rgi60_neighb_merged/17_rgi60_SouthernAndes/17_rgi60_SouthernAndes.shp'
-fn_dem_spot = '/home/atom/ongoing/work_stderr_dem/case_study_npi/SPOT_2012-03-18_NPI_NDV.tif'
-fn_dem_aster = '/home/atom/ongoing/work_stderr_dem/case_study_npi/AST_L1A_00303182012144228/AST_L1A_00303182012144228_Z.tif'
-fn_corr='/home/atom/ongoing/work_stderr_dem/case_study_npi/AST_L1A_00303182012144228/AST_L1A_00303182012144228_CORR.tif'
+fn_dem_spot = '/home/atom/ongoing/work_stderr_dem/case_study_npi/SPOT5_2012-03-18_NPI_NDV.tif'
+fn_dem_aster = '/home/atom/ongoing/work_stderr_dem/case_study_npi/AST_L1A_00303182012144228/ASTER_NPI_00303182012144228_Z.tif'
+fn_corr='/home/atom/ongoing/work_stderr_dem/case_study_npi/AST_L1A_00303182012144228/ASTER_NPI_00303182012144228_CORR.tif'
 
 dem_spot = gu.Raster(fn_dem_spot)
 dem_aster = xdem.DEM(fn_dem_aster)
@@ -37,4 +37,4 @@ aligned_dem_spot = nk_deramp.apply(reproj_dem_spot)
 
 # Save co-registered elevation differences to file
 dh = dem_aster - aligned_dem_spot
-dh.save('/home/atom/ongoing/work_stderr_dem/case_study_npi/dh_ASTER-SPOT_NK_Deramp.tif')
+dh.save('/home/atom/ongoing/work_stderr_dem/case_study_npi/dh_ASTER-SPOT5_NPI_NK_Deramp.tif')
