@@ -2,7 +2,7 @@
 
 Code and results of [**Hugonnet et al. (2022), *Uncertainty analysis of digital elevation models by spatial inference from stable terrain***](https://doi.org/10.1109/jstars.2022.3188922). :globe_with_meridians: :mount_fuji: 
 
-**The dataset is available at: [https://doi.org/10.5281/zenodo.7298913](https://doi.org/10.5281/zenodo.7298913).**
+The dataset is available at **[https://doi.org/10.5281/zenodo.7298913](https://doi.org/10.5281/zenodo.7298913)**.
 
 Below a short guide to: perform the uncertainty analysis of your own DEMs, retrieve the case study datasets, reproduce the processing steps with the case studies, reproduce the figures and tables of the paper.
 
@@ -11,9 +11,8 @@ Below a short guide to: perform the uncertainty analysis of your own DEMs, retri
 ## Uncertainty analysis of your own data with xDEM
 
 The results of this study are based on routines implemented in [xDEM](https://github.com/GlacioHack/xdem) with 
-documentation at [https://xdem.readthedocs.io/](https://xdem.readthedocs.io/).
-
-xDEM includes tutorials to perform uncertainty analysis of your own DEM data based on this article.
+documentation at [https://xdem.readthedocs.io/](https://xdem.readthedocs.io/). xDEM includes tutorials to perform 
+uncertainty analysis of your own DEM data based on this article.
 
 There are **three basic examples** with:
 
@@ -63,7 +62,8 @@ install a working environment containing those packages and their dependencies w
 conda env create -f environment.yml
 ```
 
-*Note: Due to continuous development changes, xDEM is here set to v0.0.6 to exactly reproduce the processing steps as in the paper.* 
+*Note: Due to continuous development changes, xDEM is set to v0.0.6 in the environment file to exactly reproduce the 
+processing steps of the paper.* 
 
 ### How to use
 
