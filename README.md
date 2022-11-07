@@ -2,23 +2,37 @@
 
 Code and results of [**Hugonnet et al. (2022), *Uncertainty analysis of digital elevation models by spatial inference from stable terrain***](https://doi.org/10.1109/jstars.2022.3188922). :globe_with_meridians: :mount_fuji: 
 
+**The dataset is available at: [https://doi.org/10.5281/zenodo.7298913](https://doi.org/10.5281/zenodo.7298913).**
+
 Below a short guide to: perform the uncertainty analysis of your own DEMs, retrieve the case study datasets, reproduce the processing steps with the case studies, reproduce the figures and tables of the paper.
 
 <img src="https://github.com/rhugonnet/dem_error_study/blob/main/figures/fig_2.png?raw=true" width="800">
 
 ## Uncertainty analysis of your own data with xDEM
 
-The results of this study are based on routines implemented in [xDEM](https://github.com/GlacioHack/xdem) with documentation at https://xdem.readthedocs.io/.
-In particular, xDEM includes tutorials on DEM uncertainty analysis to:
-- Estimate the heteroscedasticity of elevation errors ([Heteroscedasticity gallery example here](https://xdem.readthedocs.io/en/latest/auto_examples/plot_nonstationary_error.html#sphx-glr-auto-examples-plot-nonstationary-error-py)),
-- Standardize elevation differences to use stable as an error proxy ([Standardization gallery example here](https://xdem.readthedocs.io/en/latest/auto_examples/plot_standardization.html#sphx-glr-auto-examples-plot-standardization-py)),
-- Estimate spatial correlation of errors and propagate to uncertainties of volume change ([Spatial correlation gallery example here](https://xdem.readthedocs.io/en/latest/auto_examples/plot_vgm_error.html#sphx-glr-auto-examples-plot-vgm-error-py)).
+The results of this study are based on routines implemented in [xDEM](https://github.com/GlacioHack/xdem) with 
+documentation at [https://xdem.readthedocs.io/](https://xdem.readthedocs.io/).
 
-***Note at the date of 08.07.22:** xDEM is still in development (version 0.0.6), and its documentation in construction. 
-**Some changes are ongoing or planned for the summer 2022, including:***
+xDEM includes tutorials to perform uncertainty analysis of your own DEM data based on this article.
+
+There are **three basic examples** with:
+
+- A pipeline to rapidly estimate an elevation error map ([Error map example here](https://xdem.readthedocs.io/en/latest/basic_examples/plot_infer_heterosc.html#sphx-glr-basic-examples-plot-infer-heterosc-py)),
+- A pipeline to rapidly estimate the spatial correlation of errors ([Spatial correlation example here](https://xdem.readthedocs.io/en/latest/basic_examples/plot_infer_spatial_correlation.html#sphx-glr-basic-examples-plot-infer-spatial-correlation-py)),
+- A pipeline to rapidly propagate elevation errors spatially ([Spatial error propagation example here](https://xdem.readthedocs.io/en/latest/basic_examples/plot_spatial_error_propagation.html#sphx-glr-basic-examples-plot-spatial-error-propagation-py)).
+
+Additionally, there are **three advanced examples** to:
+
+- Estimate and model the heteroscedasticity of elevation errors ([Advanced heteroscedasticity example here](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_heterosc_estimation_modelling.html#sphx-glr-advanced-examples-plot-heterosc-estimation-modelling-py)),
+- Estimate and model the spatial correlation of elevation errors ([Advanced spatial correlation example here](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_variogram_estimation_modelling.html#sphx-glr-advanced-examples-plot-variogram-estimation-modelling-py)),
+- Standardize elevation differences to use stable terrain as a proxy ([Standardization example here](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_standardization.html#sphx-glr-advanced-examples-plot-standardization-py)).
+
+***Note at the date of 07.11.22:** xDEM is still in development (version 0.0.7), and its documentation in 
+construction. 
+
+**Compared to version 0.0.6 used in this repository, several changes were added to xDEM late 2022, including:***
 
 - *Construction of an error pipeline that combines all steps,*
-- *Automate the retrieval of ICESat-2 data (using [icepyx](https://github.com/icesat2py/icepyx)) to perform local uncertainty analysis*,
 - *Streamlining of existing gallery example,*
 - *Minor fixes and improvements of routines.*
 
@@ -26,10 +40,14 @@ In particular, xDEM includes tutorials on DEM uncertainty analysis to:
 ## Retrieve the case study datasets
 
 The dataset consists of:
-1. **Nearly-simultaneous Pléiades–SPOT-6 elevation differences at the Mont-Blanc massif and the Pléiades DEM used as a reference for
-alignment and deriving terrain attributes** (.tif, *~200 MB*) at 5 m posting available at [TBC](TBC).
-2. **Nearly-simultaneous ASTER–SPOT-5 elevation differences at the Northern Patagonian Icefield** at 30 m posting (.tif, *~50 MB*)
- available at [TBC](TBC).
+1. **Nearly-simultaneous Pléiades–SPOT-6 elevation differences at the Mont-Blanc massif, the Pléiades DEM used as a 
+   reference for alignment and deriving terrain attributes, the SPOT-6 DEM** (.tif, 
+   *~1 GB*) at 
+   5 m posting and the **forest mask derived from ESA CCI** (.shp, *~5 kB*) available at 
+   [https://doi.org/10.5281/zenodo.7298913](https://doi.org/10.5281/zenodo.7298913).
+2. **Nearly-simultaneous ASTER–SPOT-5 elevation differences at the Northern Patagonian Icefield, the ASTER DEM 
+   used as a reference, the quality of stereo-correlation out of MicMac, and the SPOT-5 DEM** at 30 m 
+   posting (.tif, *~150 MB*) available at [https://doi.org/10.5281/zenodo.7298913](https://doi.org/10.5281/zenodo.7298913).
 
 
 ## Reproduce the processing steps with the case studies
