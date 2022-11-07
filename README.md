@@ -17,23 +17,23 @@ xDEM includes tutorials to perform uncertainty analysis of your own DEM data bas
 
 There are **three basic examples** with:
 
-- A pipeline to rapidly estimate an elevation error map ([Error map example here](https://xdem.readthedocs.io/en/latest/basic_examples/plot_infer_heterosc.html#sphx-glr-basic-examples-plot-infer-heterosc-py)),
-- A pipeline to rapidly estimate the spatial correlation of errors ([Spatial correlation example here](https://xdem.readthedocs.io/en/latest/basic_examples/plot_infer_spatial_correlation.html#sphx-glr-basic-examples-plot-infer-spatial-correlation-py)),
-- A pipeline to rapidly propagate elevation errors spatially ([Spatial error propagation example here](https://xdem.readthedocs.io/en/latest/basic_examples/plot_spatial_error_propagation.html#sphx-glr-basic-examples-plot-spatial-error-propagation-py)).
+- A single-line pipeline to [estimate an elevation error map](https://xdem.readthedocs.io/en/latest/basic_examples/plot_infer_heterosc.html#sphx-glr-basic-examples-plot-infer-heterosc-py),
+- A single-line pipeline to [estimate the spatial correlation of errors](https://xdem.readthedocs.io/en/latest/basic_examples/plot_infer_spatial_correlation.html#sphx-glr-basic-examples-plot-infer-spatial-correlation-py),
+- A single-line pipeline to [propagate elevation errors spatially](https://xdem.readthedocs.io/en/latest/basic_examples/plot_spatial_error_propagation.html#sphx-glr-basic-examples-plot-spatial-error-propagation-py).
 
-Additionally, there are **three advanced examples** to:
+Additionally, there are **three advanced examples** with:
 
-- Estimate and model the heteroscedasticity of elevation errors ([Advanced heteroscedasticity example here](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_heterosc_estimation_modelling.html#sphx-glr-advanced-examples-plot-heterosc-estimation-modelling-py)),
-- Estimate and model the spatial correlation of elevation errors ([Advanced spatial correlation example here](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_variogram_estimation_modelling.html#sphx-glr-advanced-examples-plot-variogram-estimation-modelling-py)),
-- Standardize elevation differences to use stable terrain as a proxy ([Standardization example here](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_standardization.html#sphx-glr-advanced-examples-plot-standardization-py)).
+- The detailed steps to [estimate and model the heteroscedasticity of elevation errors](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_heterosc_estimation_modelling.html#sphx-glr-advanced-examples-plot-heterosc-estimation-modelling-py),
+- The detailed steps to [estimate and model the spatial correlation of elevation errors](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_variogram_estimation_modelling.html#sphx-glr-advanced-examples-plot-variogram-estimation-modelling-py),
+- The detailed steps to [standardize elevation differences to use stable terrain as a proxy](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_standardization.html#sphx-glr-advanced-examples-plot-standardization-py).
 
-***Note at the date of 07.11.22:** xDEM is still in development (version 0.0.7), and its documentation in 
+**Note at the date of 07.11.22:** xDEM is still in development (version 0.0.7), and its documentation in 
 construction. 
 
 **Compared to version 0.0.6 used in this repository, several changes were added to xDEM late 2022, including:***
 
-- *Construction of an error pipeline that combines all steps,*
-- *Streamlining of existing gallery example,*
+- *Construction of error pipelines that combines all steps,*
+- *Addition of existing gallery examples and streamlining of existing ones,*
 - *Minor fixes and improvements of routines.*
 
 
