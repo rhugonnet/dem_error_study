@@ -26,10 +26,9 @@ Additionally, there are **three advanced examples** with:
 - The detailed steps to [estimate and model the spatial correlation of elevation errors](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_variogram_estimation_modelling.html#sphx-glr-advanced-examples-plot-variogram-estimation-modelling-py),
 - The detailed steps to [standardize elevation differences to use stable terrain as a proxy](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_standardization.html#sphx-glr-advanced-examples-plot-standardization-py).
 
-**Note at the date of 07.11.22:** xDEM is still in development (version 0.0.7), and its documentation in 
-construction. 
-
-**Compared to version 0.0.6 used in this repository, several changes were added to xDEM late 2022, including:***
+***Note at the date of 07.11.22:** xDEM is still in development (version 0.0.7), and its documentation in 
+construction. Compared to version 0.0.6 used in this repository, several changes were added to xDEM late 2022, 
+including:*
 
 - *Construction of error pipelines that combines all steps,*
 - *Addition of existing gallery examples and streamlining of existing ones,*
