@@ -10,9 +10,8 @@ Below a short guide to: perform the uncertainty analysis of your own DEMs, retri
 
 ## Uncertainty analysis of your own data with xDEM
 
-The results of this study are based on routines implemented in [xDEM](https://github.com/GlacioHack/xdem) with 
-documentation at [https://xdem.readthedocs.io/](https://xdem.readthedocs.io/). xDEM includes tutorials to perform 
-uncertainty analysis of your own DEM data based on this article.
+The methods of this study are implemented in [xDEM](https://github.com/GlacioHack/xdem), in routines that can be used to perform uncertainty analysis of your 
+own DEM data.
 
 There are **three basic examples** with:
 
@@ -25,6 +24,8 @@ Additionally, there are **three advanced examples** with:
 - The detailed steps to [estimate and model the heteroscedasticity of elevation errors](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_heterosc_estimation_modelling.html#sphx-glr-advanced-examples-plot-heterosc-estimation-modelling-py),
 - The detailed steps to [estimate and model the spatial correlation of elevation errors](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_variogram_estimation_modelling.html#sphx-glr-advanced-examples-plot-variogram-estimation-modelling-py),
 - The detailed steps to [standardize elevation differences to use stable terrain as a proxy](https://xdem.readthedocs.io/en/latest/advanced_examples/plot_standardization.html#sphx-glr-advanced-examples-plot-standardization-py).
+
+The full documentation of xDEM can be found at [https://xdem.readthedocs.io/](https://xdem.readthedocs.io/).
 
 ***Note at the date of 07.11.22:** xDEM is still in development (version 0.0.7), and its documentation in 
 construction. Compared to version 0.0.6 used in this repository, several changes were added to xDEM late 2022, 
@@ -82,7 +83,7 @@ processing steps done in *case_study_montblanc/* or *case_study_npi/* for plotti
 the full distribution of samples, not only the binned estimates of dispersion).
 
 For plotting figures of your own data, xDEM provides simpler plotting tools of binned data and variograms 
-(see [example gallery](https://xdem.readthedocs.io/en/latest/auto_examples/index.html)).
+(see [example gallery](https://xdem.readthedocs.io/en/latest/basic_examples/index.html)).
 
 
 Enjoy! :volcano: 
